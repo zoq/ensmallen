@@ -2,7 +2,7 @@
 # just installs the headers to the install location, and optionally builds the
 # test program.
 cmake_minimum_required(VERSION 3.3.2)
-project(ensmallen 
+project(ensmallen
         LANGUAGES C CXX)
 
 # Configurable options for CMake.
@@ -58,7 +58,7 @@ if(USE_OPENMP)
 endif()
 
 # Find Armadillo and link it.
-find_package(Armadillo 8.400.0 REQUIRED)
+find_package(Armadillo 9.800.0 REQUIRED)
 target_link_libraries(ensmallen INTERFACE Armadillo::Armadillo)
 
 # Set helper variables for creating the version, config and target files.
